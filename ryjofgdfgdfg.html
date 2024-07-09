@@ -1,0 +1,42 @@
+const generatePage = (): string => {
+const letter = "H";
+const imageSize = "200px";
+const imageAlt = "Picture";
+
+const html = `
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Big Letter with Picture</title>
+   <style>
+      .big-letter {
+         font-size: 100px;
+         text-align: center;
+      }
+
+      .handsome {
+         text-align: center;
+      }
+
+      .image {
+         display: block;
+         margin: 0 auto;
+         width: ${imageSize};
+      }
+   </style>
+</head>
+
+<body>
+   <div class="big-letter">${letter}</div>
+   <div class="handsome">Handsome</div>
+   <img class="image" src="path/to/The.jpg" alt="${imageAlt}">
+</body>
+
+</html>
+`;
+
+return html;
+};
+
+console.log(generatePage());
